@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NightParty.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace NightParty
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            Login janela = new Login();
+
+            janela.ShowDialog();
+
+            Application.Exit();
         }
     }
 }

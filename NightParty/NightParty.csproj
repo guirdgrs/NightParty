@@ -89,8 +89,65 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Caixa.Designer.cs">
+      <DependentUpon>Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GerenciamentoPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GerenciamentoPedidos.Designer.cs">
+      <DependentUpon>GerenciamentoPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GerenciamentoPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GerenciamentoPlaylist.Designer.cs">
+      <DependentUpon>GerenciamentoPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GerenciamentoProdtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GerenciamentoProdtos.Designer.cs">
+      <DependentUpon>GerenciamentoProdtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GerenciamentoSR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GerenciamentoSR.Designer.cs">
+      <DependentUpon>GerenciamentoSR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GerenciamentoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GerenciamentoUsuarios.Designer.cs">
+      <DependentUpon>GerenciamentoUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -100,6 +157,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Caixa.resx">
+      <DependentUpon>Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GerenciamentoPedidos.resx">
+      <DependentUpon>GerenciamentoPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GerenciamentoPlaylist.resx">
+      <DependentUpon>GerenciamentoPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GerenciamentoProdtos.resx">
+      <DependentUpon>GerenciamentoProdtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GerenciamentoSR.resx">
+      <DependentUpon>GerenciamentoSR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GerenciamentoUsuarios.resx">
+      <DependentUpon>GerenciamentoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,5 +189,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
