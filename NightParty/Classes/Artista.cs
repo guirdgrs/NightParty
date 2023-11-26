@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace NightParty.Classes
 {
-    internal class Artista
+    public class Artista
     {
         public int Id { get; set; }
         public string Nome { get; set; }
 
         public DataTable Listar()
         {
-            string comando = "SELECT * FROM artistas";
+            string comando = "SELECT nome FROM artistas";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();

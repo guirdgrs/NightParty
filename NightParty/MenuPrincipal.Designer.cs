@@ -75,81 +75,87 @@
             this.pibSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pibSair.TabIndex = 1;
             this.pibSair.TabStop = false;
+            this.pibSair.Click += new System.EventHandler(this.pibSair_Click);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(202, 63);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(386, 46);
+            this.lblTitulo.Size = new System.Drawing.Size(391, 44);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "     Menu Principal     ";
             // 
             // btnPedido
             // 
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPedido.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.Location = new System.Drawing.Point(184, 151);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Size = new System.Drawing.Size(419, 42);
             this.btnPedido.TabIndex = 3;
             this.btnPedido.Text = "Novo Pedido";
             this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
             // btnMusica
             // 
             this.btnMusica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMusica.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMusica.Location = new System.Drawing.Point(184, 199);
             this.btnMusica.Name = "btnMusica";
             this.btnMusica.Size = new System.Drawing.Size(419, 42);
             this.btnMusica.TabIndex = 4;
             this.btnMusica.Text = "Solicitar Música";
             this.btnMusica.UseVisualStyleBackColor = true;
+            this.btnMusica.Click += new System.EventHandler(this.btnMusica_Click);
             // 
             // btnUsuario
             // 
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Location = new System.Drawing.Point(184, 334);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(419, 42);
             this.btnUsuario.TabIndex = 5;
             this.btnUsuario.Text = "Usuários";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnPlaylist
             // 
             this.btnPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPlaylist.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaylist.Location = new System.Drawing.Point(184, 247);
             this.btnPlaylist.Name = "btnPlaylist";
             this.btnPlaylist.Size = new System.Drawing.Size(419, 42);
             this.btnPlaylist.TabIndex = 6;
             this.btnPlaylist.Text = "Playlist";
             this.btnPlaylist.UseVisualStyleBackColor = true;
+            this.btnPlaylist.Click += new System.EventHandler(this.btnPlaylist_Click);
             // 
             // btnProdutos
             // 
             this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProdutos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdutos.Location = new System.Drawing.Point(184, 382);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(419, 42);
             this.btnProdutos.TabIndex = 7;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // pibM2
             // 
             this.pibM2.BackColor = System.Drawing.Color.Transparent;
             this.pibM2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibM2.Image = ((System.Drawing.Image)(resources.GetObject("pibM2.Image")));
-            this.pibM2.Location = new System.Drawing.Point(126, 212);
+            this.pibM2.Location = new System.Drawing.Point(144, 212);
             this.pibM2.Name = "pibM2";
             this.pibM2.Size = new System.Drawing.Size(34, 29);
             this.pibM2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +167,7 @@
             this.pibPl2.BackColor = System.Drawing.Color.Transparent;
             this.pibPl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibPl2.Image = ((System.Drawing.Image)(resources.GetObject("pibPl2.Image")));
-            this.pibPl2.Location = new System.Drawing.Point(126, 260);
+            this.pibPl2.Location = new System.Drawing.Point(144, 260);
             this.pibPl2.Name = "pibPl2";
             this.pibPl2.Size = new System.Drawing.Size(34, 29);
             this.pibPl2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +179,7 @@
             this.pibpl1.BackColor = System.Drawing.Color.Transparent;
             this.pibpl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibpl1.Image = ((System.Drawing.Image)(resources.GetObject("pibpl1.Image")));
-            this.pibpl1.Location = new System.Drawing.Point(623, 260);
+            this.pibpl1.Location = new System.Drawing.Point(609, 260);
             this.pibpl1.Name = "pibpl1";
             this.pibpl1.Size = new System.Drawing.Size(34, 29);
             this.pibpl1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +191,7 @@
             this.pibm1.BackColor = System.Drawing.Color.Transparent;
             this.pibm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibm1.Image = ((System.Drawing.Image)(resources.GetObject("pibm1.Image")));
-            this.pibm1.Location = new System.Drawing.Point(623, 212);
+            this.pibm1.Location = new System.Drawing.Point(609, 212);
             this.pibm1.Name = "pibm1";
             this.pibm1.Size = new System.Drawing.Size(34, 29);
             this.pibm1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +203,7 @@
             this.pibP1.BackColor = System.Drawing.Color.Transparent;
             this.pibP1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibP1.Image = ((System.Drawing.Image)(resources.GetObject("pibP1.Image")));
-            this.pibP1.Location = new System.Drawing.Point(623, 164);
+            this.pibP1.Location = new System.Drawing.Point(609, 164);
             this.pibP1.Name = "pibP1";
             this.pibP1.Size = new System.Drawing.Size(34, 29);
             this.pibP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -209,7 +215,7 @@
             this.pibP2.BackColor = System.Drawing.Color.Transparent;
             this.pibP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibP2.Image = ((System.Drawing.Image)(resources.GetObject("pibP2.Image")));
-            this.pibP2.Location = new System.Drawing.Point(126, 164);
+            this.pibP2.Location = new System.Drawing.Point(144, 164);
             this.pibP2.Name = "pibP2";
             this.pibP2.Size = new System.Drawing.Size(34, 29);
             this.pibP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +227,7 @@
             this.pibU1.BackColor = System.Drawing.Color.Transparent;
             this.pibU1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibU1.Image = ((System.Drawing.Image)(resources.GetObject("pibU1.Image")));
-            this.pibU1.Location = new System.Drawing.Point(623, 334);
+            this.pibU1.Location = new System.Drawing.Point(609, 347);
             this.pibU1.Name = "pibU1";
             this.pibU1.Size = new System.Drawing.Size(34, 29);
             this.pibU1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,7 +239,7 @@
             this.pibU2.BackColor = System.Drawing.Color.Transparent;
             this.pibU2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibU2.Image = ((System.Drawing.Image)(resources.GetObject("pibU2.Image")));
-            this.pibU2.Location = new System.Drawing.Point(126, 334);
+            this.pibU2.Location = new System.Drawing.Point(144, 347);
             this.pibU2.Name = "pibU2";
             this.pibU2.Size = new System.Drawing.Size(34, 29);
             this.pibU2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +251,7 @@
             this.pibPro2.BackColor = System.Drawing.Color.Transparent;
             this.pibPro2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibPro2.Image = ((System.Drawing.Image)(resources.GetObject("pibPro2.Image")));
-            this.pibPro2.Location = new System.Drawing.Point(126, 395);
+            this.pibPro2.Location = new System.Drawing.Point(144, 395);
             this.pibPro2.Name = "pibPro2";
             this.pibPro2.Size = new System.Drawing.Size(34, 29);
             this.pibPro2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +263,7 @@
             this.pibPro1.BackColor = System.Drawing.Color.Transparent;
             this.pibPro1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pibPro1.Image = ((System.Drawing.Image)(resources.GetObject("pibPro1.Image")));
-            this.pibPro1.Location = new System.Drawing.Point(623, 395);
+            this.pibPro1.Location = new System.Drawing.Point(609, 395);
             this.pibPro1.Name = "pibPro1";
             this.pibPro1.Size = new System.Drawing.Size(34, 29);
             this.pibPro1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -267,20 +273,21 @@
             // btnCaixa
             // 
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCaixa.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaixa.Location = new System.Drawing.Point(184, 430);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(419, 42);
             this.btnCaixa.TabIndex = 19;
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.UseVisualStyleBackColor = true;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(126, 443);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 443);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +299,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(623, 443);
+            this.pictureBox2.Location = new System.Drawing.Point(609, 443);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -301,7 +308,7 @@
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -327,9 +334,9 @@
             this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pibSair);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NightParty.Views
 {
-    public partial class GerenciamentoProdtos : Form
+    public partial class GerenciamentoProdutos : Form
     {
-        public GerenciamentoProdtos()
+        public GerenciamentoProdutos()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace NightParty.Views
 {
-    partial class GerenciamentoProdtos
+    partial class GerenciamentoProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciamentoProdtos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciamentoProdutos));
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.grbAddProduto = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();

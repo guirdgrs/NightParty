@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NightParty.Classes
 {
-    internal class Usuario
+    public class Usuario
     {
         public int Id { get; set; }
         public string NomeCompleto { get; set; }
@@ -18,7 +18,7 @@ namespace NightParty.Classes
         //Método de login
         public DataTable Logar()
         {
-            string comando = "SELECT id, nome_completo, email, senha" +
+            string comando = "SELECT idusuario, nome_completo, email, senha" +
                 " FROM usuarios WHERE email = @email AND senha = @senha";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();

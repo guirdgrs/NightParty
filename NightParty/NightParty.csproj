@@ -34,13 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EasyEncryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EasyEncryption.1.0.2\lib\EasyEncryption.dll</HintPath>
+      <HintPath>..\..\..\Np\packages\EasyEncryption.1.0.2\lib\EasyEncryption.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySqlConnector.2.3.1\lib\net471\MySqlConnector.dll</HintPath>
+      <HintPath>..\..\..\Np\packages\MySqlConnector.2.3.1\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -121,11 +121,11 @@
     <Compile Include="Views\GerenciamentoPlaylist.Designer.cs">
       <DependentUpon>GerenciamentoPlaylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\GerenciamentoProdtos.cs">
+    <Compile Include="Views\GerenciamentoProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\GerenciamentoProdtos.Designer.cs">
-      <DependentUpon>GerenciamentoProdtos.cs</DependentUpon>
+    <Compile Include="Views\GerenciamentoProdutos.Designer.cs">
+      <DependentUpon>GerenciamentoProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\GerenciamentoSR.cs">
       <SubType>Form</SubType>
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Views\GerenciamentoPlaylist.resx">
       <DependentUpon>GerenciamentoPlaylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\GerenciamentoProdtos.resx">
-      <DependentUpon>GerenciamentoProdtos.cs</DependentUpon>
+    <EmbeddedResource Include="Views\GerenciamentoProdutos.resx">
+      <DependentUpon>GerenciamentoProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\GerenciamentoSR.resx">
       <DependentUpon>GerenciamentoSR.cs</DependentUpon>

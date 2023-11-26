@@ -15,15 +15,7 @@ namespace NightParty.Views
         public Login()
         {
             InitializeComponent();
-
-            if(txbEmail.Text == "" || txbSenha.Text == "")
-            {
-                btnLogar.Enabled = false;
-            }
-            else
-            {
-                btnLogar.Enabled = true;
-            }
+            btnLogar.Enabled = true;
         }
 
         private void pibSair_Click(object sender, EventArgs e)
@@ -60,6 +52,9 @@ namespace NightParty.Views
 
                 txbEmail.Clear();
                 txbSenha.Clear();
+
+                MessageBox.Show("Bem-vindo " + usuario.NomeCompleto , "Sucesso",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 Hide();
             }

@@ -58,11 +58,11 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(253, 49);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(216, 46);
+            this.lblTitulo.Size = new System.Drawing.Size(227, 44);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "     Login     ";
             // 
@@ -70,11 +70,11 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(112, 134);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(83, 32);
+            this.lblEmail.Size = new System.Drawing.Size(86, 31);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
@@ -82,28 +82,28 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.BackColor = System.Drawing.Color.Transparent;
-            this.lblSenha.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.White;
             this.lblSenha.Location = new System.Drawing.Point(100, 173);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(95, 32);
+            this.lblSenha.Size = new System.Drawing.Size(97, 31);
             this.lblSenha.TabIndex = 3;
             this.lblSenha.Text = "Senha";
             // 
             // txbEmail
             // 
-            this.txbEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.Location = new System.Drawing.Point(204, 134);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(309, 27);
+            this.txbEmail.Size = new System.Drawing.Size(309, 26);
             this.txbEmail.TabIndex = 4;
             // 
             // txbSenha
             // 
-            this.txbSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSenha.Location = new System.Drawing.Point(204, 178);
             this.txbSenha.Name = "txbSenha";
-            this.txbSenha.Size = new System.Drawing.Size(309, 27);
+            this.txbSenha.Size = new System.Drawing.Size(309, 26);
             this.txbSenha.TabIndex = 5;
             this.txbSenha.UseSystemPasswordChar = true;
             // 
@@ -111,11 +111,11 @@
             // 
             this.chbMostrarSenha.AutoSize = true;
             this.chbMostrarSenha.BackColor = System.Drawing.Color.Transparent;
-            this.chbMostrarSenha.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbMostrarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbMostrarSenha.ForeColor = System.Drawing.Color.White;
             this.chbMostrarSenha.Location = new System.Drawing.Point(317, 230);
             this.chbMostrarSenha.Name = "chbMostrarSenha";
-            this.chbMostrarSenha.Size = new System.Drawing.Size(196, 32);
+            this.chbMostrarSenha.Size = new System.Drawing.Size(201, 33);
             this.chbMostrarSenha.TabIndex = 6;
             this.chbMostrarSenha.Text = "Mostrar Senha";
             this.chbMostrarSenha.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@
             this.btnLogar.BackColor = System.Drawing.Color.Transparent;
             this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogar.ForeColor = System.Drawing.Color.White;
             this.btnLogar.Location = new System.Drawing.Point(204, 287);
             this.btnLogar.Name = "btnLogar";

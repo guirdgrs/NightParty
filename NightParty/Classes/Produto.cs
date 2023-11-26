@@ -135,5 +135,39 @@ namespace NightParty.Classes
                 return false;
             }
         }
+        public DataTable ListarComidas()
+        {
+            string comando = "SELECT * FROM view_comidas";
+
+            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Prepare();
+
+            DataTable tabela = new DataTable();
+
+            tabela.Load(cmd.ExecuteReader());
+            conexaoBD.Desconectar(con);
+
+            return tabela;
+        }
+        public DataTable ListarBebidas()
+        {
+            string comando = "SELECT * FROM view_bebidas";
+
+            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Prepare();
+
+            DataTable tabela = new DataTable();
+
+            tabela.Load(cmd.ExecuteReader());
+            conexaoBD.Desconectar(con);
+
+            return tabela;
+        }
     }
 }

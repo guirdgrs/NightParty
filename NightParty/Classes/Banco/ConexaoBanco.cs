@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySqlConnector;
+using System.Windows.Forms;
 
 namespace NightParty.Classes.Banco
 {
@@ -30,9 +31,8 @@ namespace NightParty.Classes.Banco
             catch (MySqlException e)
             {
 
-                Console.WriteLine(e.ToString());
-
-                Console.WriteLine("Não foi possível realizar a conexão.");
+                MessageBox.Show(e.ToString());
+                MessageBox.Show("Não foi possível realizar a conexão.");
 
             }
             return con;
