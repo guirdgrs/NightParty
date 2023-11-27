@@ -34,7 +34,7 @@ namespace NightParty.Classes
             return tabela;
         }
 
-        public bool Nova()
+        public bool NovaMuisca()
         {
             string comando = "INSERT INTO playlist (idusuario, idartistas, id_musica ) " +
                              "VALUES (@id_Usuario, @id_Artista, @id_Musica)";
@@ -69,7 +69,7 @@ namespace NightParty.Classes
             }
         }
 
-        public bool Apagar()
+        public bool ApagarMusica()
         {
             string comando = "DELETE FROM playlist WHERE id = @id";
 
@@ -100,7 +100,7 @@ namespace NightParty.Classes
             }
         }
 
-        public bool Editar()
+        public bool EditarMusica()
         {
             string comando = "UPDATE playlist SET idusuario = @id_Usuario, idartistas = @id_Artista, " +
                              "idmusica = @id_Musica " +

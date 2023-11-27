@@ -58,7 +58,7 @@ namespace NightParty
 
         private void btnCaixa_Click(object sender, EventArgs e)
         {
-            Views.Caixa janela = new Views.Caixa();
+            Views.Caixa janela = new Views.Caixa(usuario);
             janela.Show();
         }
     }
