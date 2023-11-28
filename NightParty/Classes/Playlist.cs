@@ -139,15 +139,15 @@ namespace NightParty.Classes
         }
         public bool RemoverDaPlaylist()
         {
-            string comando = "DELETE FROM playlist WHERE idmusica = @id_Musica " +
-                "AND idplaylist = @id_Playlist";
+            string comando = "DELETE FROM playlist WHERE idplaylist = @id_playlist " +
+                             "AND idmusica = @id_musica";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
 
-            cmd.Parameters.AddWithValue("@id_Playlist", IdPlaylist);
-            cmd.Parameters.AddWithValue("@id_Musica", IdMusica);
+            cmd.Parameters.AddWithValue("@id_playlist", IdPlaylist);
+            cmd.Parameters.AddWithValue("@id_musica", IdMusica);
 
             cmd.Prepare();
 

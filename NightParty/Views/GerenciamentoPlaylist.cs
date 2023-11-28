@@ -48,7 +48,7 @@ namespace NightParty.Views
         private void AtualizarDados()
         {
             Classes.Playlist playlist = new Classes.Playlist();
-            playlist.Id = DateTime.Now.Day;
+            playlist.IdPlaylist = int.Parse(nudDia.Text);
             dgvPlaylist.DataSource = playlist.Listar();
 
             cmbMusica.ResetText();
@@ -70,8 +70,10 @@ namespace NightParty.Views
         {
             Classes.Playlist playlist = new Classes.Playlist();
 
-            playlist.IdPlaylist = DateTime.Now.Day;
-            playlist.IdMusica = int.Parse(cmbMusica.Text.Split('-')[0]);
+            try
+            {
+                playlist.IdPlaylist = DateTime.Now.Day;
+                playlist.IdMusica = int.Parse(cmbMusica.Text.Split('-')[0]);
 
                 if (playlist.NovaMusica() && playlist.AdicionarNaPlaylist())
                 {
@@ -85,33 +87,46 @@ namespace NightParty.Views
                     MessageBox.Show("Ocorreu um erro", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-        }
-
-        private void btnRemoverMusicaPl_Click(object sender, EventArgs e)
-        {
-            Classes.Playlist playlist = new Classes.Playlist();
-            playlist.IdMusica = int.Parse(txbMusicaAdd.Text.Split('-')[0]);
-            playlist.IdPlaylist = int.Parse(nudDia.Text);
-
-            try 
-            { 
-            if (playlist.ApagarMusica() && playlist.RemoverDaPlaylist())
-            {
-                MessageBox.Show("Música removida da playlist!", "Sucesso",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                AtualizarDados();
-            }
-            else
-            {
-                MessageBox.Show("Ocorreu um erro", "Erro",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             }
             catch
             {
                 MessageBox.Show("Ocorreu um erro", "Erro",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRemoverMusicaPl_Click(object sender, EventArgs e)
+        {
+            Classes.Playlist playlist = new Classes.Playlist();
+
+            var r = MessageBox.Show("Tem certeza que deseja remover?", "Atenção!",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(r == DialogResult.Yes)
+            {
+                try
+                {
+                    playlist.IdPlaylist = DateTime.Now.Day;
+                    playlist.IdMusica = int.Parse(txbMusicaAdd.Text.Split('-')[0]);
+
+                    if (playlist.ApagarMusica() && playlist.RemoverDaPlaylist())
+                    {
+                        MessageBox.Show("Música removida da playlist!", "Sucesso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        AtualizarDados();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro", "Erro",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Ocorreu um erro", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

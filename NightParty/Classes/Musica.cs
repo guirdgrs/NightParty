@@ -35,15 +35,15 @@ namespace NightParty.Classes
 
         public bool Cadastrar()
         {
-            string comando = "INSERT INTO musicas (nome, idartista, idusuario ) " +
-                             "VALUES (@nome, @id_Artista, @id_Usuario)";
+            string comando = "INSERT INTO musicas (nome, idartistas, idusuario) " +
+                             "VALUES (@nome, @id_Artistas, @id_Usuario)";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
 
             cmd.Parameters.AddWithValue("@nome", Nome);
-            cmd.Parameters.AddWithValue("@id_Artista", IdArtista);
+            cmd.Parameters.AddWithValue("@id_Artistas", IdArtista);
             cmd.Parameters.AddWithValue("@id_Usuario", IdUsuario);
 
             cmd.Prepare();
@@ -70,7 +70,7 @@ namespace NightParty.Classes
 
         public bool Apagar()
         {
-            string comando = "DELETE FROM musicas WHERE id = @id";
+            string comando = "DELETE FROM musicas WHERE idmusicas = @id";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
@@ -103,7 +103,7 @@ namespace NightParty.Classes
         {
             string comando = "UPDATE musicas SET nome = @nome, idartistas = @id_Artista, " +
                              "idusuario = @id_Usuario " +
-                             "WHERE id = @id";
+                             "WHERE idmusicas = @id";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();

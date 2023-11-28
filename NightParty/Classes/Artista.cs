@@ -15,7 +15,8 @@ namespace NightParty.Classes
 
         public DataTable Listar()
         {
-            string comando = "SELECT * FROM artistas";
+            string comando = "SELECT idartistas AS 'IDArtista(s)', " +
+                             "nome AS 'Nome' FROM artistas";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
@@ -66,7 +67,7 @@ namespace NightParty.Classes
 
         public bool Apagar()
         {
-            string comando = "DELETE FROM artitas WHERE id = @id";
+            string comando = "DELETE FROM artistas WHERE idartistas = @id";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
@@ -97,8 +98,8 @@ namespace NightParty.Classes
 
         public bool Editar()
         {
-            string comando = "UPDATE artitas SET nome = @nome " +
-                             "WHERE id = @id";
+            string comando = "UPDATE artistas SET nome = @nome " +
+                             "WHERE idartistas = @id";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();

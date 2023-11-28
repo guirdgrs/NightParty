@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciamentoSR));
             this.dgvArtistas = new System.Windows.Forms.DataGridView();
             this.dgvMusicas = new System.Windows.Forms.DataGridView();
@@ -46,18 +50,18 @@
             this.txbArtistaAdd = new System.Windows.Forms.TextBox();
             this.lblNovoArtista = new System.Windows.Forms.Label();
             this.grbEditar = new System.Windows.Forms.GroupBox();
+            this.cmbArtistasEdi = new System.Windows.Forms.ComboBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txbArtistaEdi = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txbMusicaEdi = new System.Windows.Forms.TextBox();
             this.lblArtistaEdi = new System.Windows.Forms.Label();
             this.lblMusicaEdi = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pibSair = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnPlaylist = new System.Windows.Forms.Button();
-            this.cmbArtistasEdi = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtistas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusicas)).BeginInit();
             this.grbAddMusica.SuspendLayout();
@@ -66,8 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibSair)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +82,23 @@
             this.dgvArtistas.AllowUserToResizeColumns = false;
             this.dgvArtistas.AllowUserToResizeRows = false;
             this.dgvArtistas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArtistas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvArtistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArtistas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvArtistas.Location = new System.Drawing.Point(510, 62);
             this.dgvArtistas.Name = "dgvArtistas";
             this.dgvArtistas.Size = new System.Drawing.Size(277, 207);
@@ -92,7 +112,23 @@
             this.dgvMusicas.AllowUserToResizeColumns = false;
             this.dgvMusicas.AllowUserToResizeRows = false;
             this.dgvMusicas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMusicas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMusicas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMusicas.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvMusicas.Location = new System.Drawing.Point(12, 62);
             this.dgvMusicas.Name = "dgvMusicas";
             this.dgvMusicas.Size = new System.Drawing.Size(475, 207);
@@ -121,6 +157,7 @@
             // btnMusicaRmv
             // 
             this.btnMusicaRmv.BackColor = System.Drawing.Color.IndianRed;
+            this.btnMusicaRmv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMusicaRmv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMusicaRmv.ForeColor = System.Drawing.Color.Black;
             this.btnMusicaRmv.Location = new System.Drawing.Point(25, 170);
@@ -156,6 +193,7 @@
             // btnMusicaAdd
             // 
             this.btnMusicaAdd.BackColor = System.Drawing.Color.LightGreen;
+            this.btnMusicaAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMusicaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMusicaAdd.ForeColor = System.Drawing.Color.Black;
             this.btnMusicaAdd.Location = new System.Drawing.Point(25, 133);
@@ -214,6 +252,7 @@
             // btnArtistaRmv
             // 
             this.btnArtistaRmv.BackColor = System.Drawing.Color.IndianRed;
+            this.btnArtistaRmv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnArtistaRmv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArtistaRmv.ForeColor = System.Drawing.Color.Black;
             this.btnArtistaRmv.Location = new System.Drawing.Point(10, 170);
@@ -222,6 +261,7 @@
             this.btnArtistaRmv.TabIndex = 20;
             this.btnArtistaRmv.Text = "Remover";
             this.btnArtistaRmv.UseVisualStyleBackColor = false;
+            this.btnArtistaRmv.Click += new System.EventHandler(this.btnArtistaRmv_Click);
             // 
             // pictureBox1
             // 
@@ -239,6 +279,7 @@
             // btnArtistaAdd
             // 
             this.btnArtistaAdd.BackColor = System.Drawing.Color.LightGreen;
+            this.btnArtistaAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnArtistaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArtistaAdd.ForeColor = System.Drawing.Color.Black;
             this.btnArtistaAdd.Location = new System.Drawing.Point(10, 133);
@@ -279,6 +320,7 @@
             this.grbEditar.Controls.Add(this.lblArtistaEdi);
             this.grbEditar.Controls.Add(this.lblMusicaEdi);
             this.grbEditar.Controls.Add(this.pictureBox4);
+            this.grbEditar.Enabled = false;
             this.grbEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbEditar.ForeColor = System.Drawing.Color.White;
             this.grbEditar.Location = new System.Drawing.Point(12, 517);
@@ -288,9 +330,19 @@
             this.grbEditar.TabStop = false;
             this.grbEditar.Text = "Editar Informações";
             // 
+            // cmbArtistasEdi
+            // 
+            this.cmbArtistasEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbArtistasEdi.FormattingEnabled = true;
+            this.cmbArtistasEdi.Location = new System.Drawing.Point(308, 51);
+            this.cmbArtistasEdi.Name = "cmbArtistasEdi";
+            this.cmbArtistasEdi.Size = new System.Drawing.Size(186, 28);
+            this.cmbArtistasEdi.TabIndex = 20;
+            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Location = new System.Drawing.Point(50, 125);
@@ -314,23 +366,10 @@
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(500, 52);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
-            // 
             // txbArtistaEdi
             // 
             this.txbArtistaEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbArtistaEdi.Location = new System.Drawing.Point(117, 88);
+            this.txbArtistaEdi.Location = new System.Drawing.Point(114, 88);
             this.txbArtistaEdi.Name = "txbArtistaEdi";
             this.txbArtistaEdi.Size = new System.Drawing.Size(185, 26);
             this.txbArtistaEdi.TabIndex = 18;
@@ -353,7 +392,7 @@
             this.txbMusicaEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMusicaEdi.Location = new System.Drawing.Point(114, 51);
             this.txbMusicaEdi.Name = "txbMusicaEdi";
-            this.txbMusicaEdi.Size = new System.Drawing.Size(188, 26);
+            this.txbMusicaEdi.Size = new System.Drawing.Size(185, 26);
             this.txbMusicaEdi.TabIndex = 2;
             // 
             // lblArtistaEdi
@@ -376,10 +415,24 @@
             this.lblMusicaEdi.TabIndex = 0;
             this.lblMusicaEdi.Text = "Música";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.ErrorImage = null;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(500, 52);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
+            // 
             // pibSair
             // 
             this.pibSair.BackColor = System.Drawing.Color.Transparent;
             this.pibSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibSair.Image = ((System.Drawing.Image)(resources.GetObject("pibSair.Image")));
             this.pibSair.Location = new System.Drawing.Point(774, 12);
             this.pibSair.Name = "pibSair";
@@ -407,6 +460,7 @@
             this.btnPlaylist.BackColor = System.Drawing.Color.Ivory;
             this.btnPlaylist.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlaylist.BackgroundImage")));
             this.btnPlaylist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaylist.ForeColor = System.Drawing.Color.Black;
             this.btnPlaylist.Location = new System.Drawing.Point(597, 568);
@@ -416,15 +470,6 @@
             this.btnPlaylist.Text = "Playlist do dia";
             this.btnPlaylist.UseVisualStyleBackColor = false;
             this.btnPlaylist.Click += new System.EventHandler(this.btnPlaylist_Click);
-            // 
-            // cmbArtistasEdi
-            // 
-            this.cmbArtistasEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbArtistasEdi.FormattingEnabled = true;
-            this.cmbArtistasEdi.Location = new System.Drawing.Point(308, 51);
-            this.cmbArtistasEdi.Name = "cmbArtistasEdi";
-            this.cmbArtistasEdi.Size = new System.Drawing.Size(186, 28);
-            this.cmbArtistasEdi.TabIndex = 20;
             // 
             // GerenciamentoSR
             // 
@@ -458,8 +503,8 @@
             this.grbEditar.ResumeLayout(false);
             this.grbEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
