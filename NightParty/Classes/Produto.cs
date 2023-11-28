@@ -15,7 +15,7 @@ namespace NightParty.Classes
         public double Preco {  get; set; }
         public int IdCategoria {  get; set; }
 
-        public DataTable Listar()
+        public DataTable ListarProdutos()
         {
             string comando = "SELECT * FROM view_produtos";
 
@@ -35,7 +35,7 @@ namespace NightParty.Classes
 
         public bool Cadastrar()
         {
-            string comando = "INSERT INTO produtos (nome, preco, id_categoria ) " +
+            string comando = "INSERT INTO produtos (nome, preco, idcategoria ) " +
                              "VALUES (@nome, @preco, @id_categoria)";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
@@ -70,7 +70,7 @@ namespace NightParty.Classes
 
         public bool Apagar()
         {
-            string comando = "DELETE FROM produtos WHERE id = @id";
+            string comando = "DELETE FROM produtos WHERE idprodutos = @id";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
@@ -102,8 +102,8 @@ namespace NightParty.Classes
         public bool Editar()
         {
             string comando = "UPDATE produtos SET nome = @nome, preco = @preco, " +
-                             "id_categoria = @id_categoria " +
-                             "WHERE id = @id";
+                             "idcategoria = @id_categoria " +
+                             "WHERE idprodutos = @id";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();

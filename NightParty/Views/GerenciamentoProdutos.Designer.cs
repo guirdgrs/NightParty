@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciamentoProdutos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.grbAddProduto = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +47,7 @@
             this.lblAddNome = new System.Windows.Forms.Label();
             this.grbEditarProduto = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txbPecoEdi = new System.Windows.Forms.TextBox();
+            this.txbPrecoEdi = new System.Windows.Forms.TextBox();
             this.lblPrecoEdi = new System.Windows.Forms.Label();
             this.cmbCategoriaEdi = new System.Windows.Forms.ComboBox();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -52,12 +56,13 @@
             this.lblProdutoEdi = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grbCategoria = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditarCategoria = new System.Windows.Forms.Button();
+            this.btnRemoverCategoria = new System.Windows.Forms.Button();
             this.txbAddCategoria = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddCategoria = new System.Windows.Forms.Button();
             this.lblAddCategoria = new System.Windows.Forms.Label();
             this.pibSair = new System.Windows.Forms.PictureBox();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.grbAddProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.grbCategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibSair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProdutos
@@ -75,11 +81,28 @@
             this.dgvProdutos.AllowUserToResizeColumns = false;
             this.dgvProdutos.AllowUserToResizeRows = false;
             this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutos.Location = new System.Drawing.Point(151, 88);
             this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.Size = new System.Drawing.Size(731, 269);
+            this.dgvProdutos.Size = new System.Drawing.Size(533, 269);
             this.dgvProdutos.TabIndex = 5;
+            this.dgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellClick);
             // 
             // grbAddProduto
             // 
@@ -94,9 +117,9 @@
             this.grbAddProduto.Controls.Add(this.txbAddProduto);
             this.grbAddProduto.Controls.Add(this.lblCategoria);
             this.grbAddProduto.Controls.Add(this.lblAddNome);
-            this.grbAddProduto.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbAddProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAddProduto.ForeColor = System.Drawing.Color.White;
-            this.grbAddProduto.Location = new System.Drawing.Point(78, 393);
+            this.grbAddProduto.Location = new System.Drawing.Point(75, 363);
             this.grbAddProduto.Name = "grbAddProduto";
             this.grbAddProduto.Size = new System.Drawing.Size(394, 238);
             this.grbAddProduto.TabIndex = 26;
@@ -117,19 +140,19 @@
             // 
             // txbPrecoAdd
             // 
-            this.txbPrecoAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPrecoAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPrecoAdd.Location = new System.Drawing.Point(149, 116);
             this.txbPrecoAdd.Name = "txbPrecoAdd";
-            this.txbPrecoAdd.Size = new System.Drawing.Size(144, 27);
+            this.txbPrecoAdd.Size = new System.Drawing.Size(144, 26);
             this.txbPrecoAdd.TabIndex = 21;
             // 
             // lblAddPreco
             // 
             this.lblAddPreco.AutoSize = true;
-            this.lblAddPreco.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddPreco.Location = new System.Drawing.Point(21, 116);
             this.lblAddPreco.Name = "lblAddPreco";
-            this.lblAddPreco.Size = new System.Drawing.Size(63, 23);
+            this.lblAddPreco.Size = new System.Drawing.Size(65, 24);
             this.lblAddPreco.TabIndex = 20;
             this.lblAddPreco.Text = "Preço";
             // 
@@ -148,7 +171,8 @@
             // btnRemoverProduto
             // 
             this.btnRemoverProduto.BackColor = System.Drawing.Color.IndianRed;
-            this.btnRemoverProduto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoverProduto.ForeColor = System.Drawing.Color.Black;
             this.btnRemoverProduto.Location = new System.Drawing.Point(25, 197);
             this.btnRemoverProduto.Name = "btnRemoverProduto";
@@ -156,20 +180,22 @@
             this.btnRemoverProduto.TabIndex = 19;
             this.btnRemoverProduto.Text = "Remover";
             this.btnRemoverProduto.UseVisualStyleBackColor = false;
+            this.btnRemoverProduto.Click += new System.EventHandler(this.btnRemoverProduto_Click);
             // 
             // cmbCategoria
             // 
-            this.cmbCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(149, 84);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(217, 27);
+            this.cmbCategoria.Size = new System.Drawing.Size(217, 28);
             this.cmbCategoria.TabIndex = 18;
             // 
             // btnAddProduto
             // 
             this.btnAddProduto.BackColor = System.Drawing.Color.LightGreen;
-            this.btnAddProduto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduto.ForeColor = System.Drawing.Color.Black;
             this.btnAddProduto.Location = new System.Drawing.Point(25, 160);
             this.btnAddProduto.Name = "btnAddProduto";
@@ -177,32 +203,33 @@
             this.btnAddProduto.TabIndex = 6;
             this.btnAddProduto.Text = "Adicionar";
             this.btnAddProduto.UseVisualStyleBackColor = false;
+            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // txbAddProduto
             // 
-            this.txbAddProduto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAddProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAddProduto.Location = new System.Drawing.Point(149, 51);
             this.txbAddProduto.Name = "txbAddProduto";
-            this.txbAddProduto.Size = new System.Drawing.Size(217, 27);
+            this.txbAddProduto.Size = new System.Drawing.Size(217, 26);
             this.txbAddProduto.TabIndex = 2;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(21, 84);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(105, 23);
+            this.lblCategoria.Size = new System.Drawing.Size(99, 24);
             this.lblCategoria.TabIndex = 1;
             this.lblCategoria.Text = "Categoria";
             // 
             // lblAddNome
             // 
             this.lblAddNome.AutoSize = true;
-            this.lblAddNome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddNome.Location = new System.Drawing.Point(21, 51);
             this.lblAddNome.Name = "lblAddNome";
-            this.lblAddNome.Size = new System.Drawing.Size(66, 23);
+            this.lblAddNome.Size = new System.Drawing.Size(66, 24);
             this.lblAddNome.TabIndex = 0;
             this.lblAddNome.Text = "Nome";
             // 
@@ -210,16 +237,16 @@
             // 
             this.grbEditarProduto.BackColor = System.Drawing.Color.Transparent;
             this.grbEditarProduto.Controls.Add(this.pictureBox3);
-            this.grbEditarProduto.Controls.Add(this.txbPecoEdi);
+            this.grbEditarProduto.Controls.Add(this.txbPrecoEdi);
             this.grbEditarProduto.Controls.Add(this.lblPrecoEdi);
             this.grbEditarProduto.Controls.Add(this.cmbCategoriaEdi);
             this.grbEditarProduto.Controls.Add(this.btnEditar);
             this.grbEditarProduto.Controls.Add(this.txbProdutoEdi);
             this.grbEditarProduto.Controls.Add(this.lblCategoriaEdi);
             this.grbEditarProduto.Controls.Add(this.lblProdutoEdi);
-            this.grbEditarProduto.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEditarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbEditarProduto.ForeColor = System.Drawing.Color.White;
-            this.grbEditarProduto.Location = new System.Drawing.Point(564, 393);
+            this.grbEditarProduto.Location = new System.Drawing.Point(561, 363);
             this.grbEditarProduto.Name = "grbEditarProduto";
             this.grbEditarProduto.Size = new System.Drawing.Size(394, 201);
             this.grbEditarProduto.TabIndex = 27;
@@ -239,37 +266,38 @@
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
             // 
-            // txbPecoEdi
+            // txbPrecoEdi
             // 
-            this.txbPecoEdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPecoEdi.Location = new System.Drawing.Point(149, 116);
-            this.txbPecoEdi.Name = "txbPecoEdi";
-            this.txbPecoEdi.Size = new System.Drawing.Size(144, 27);
-            this.txbPecoEdi.TabIndex = 21;
+            this.txbPrecoEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPrecoEdi.Location = new System.Drawing.Point(149, 116);
+            this.txbPrecoEdi.Name = "txbPrecoEdi";
+            this.txbPrecoEdi.Size = new System.Drawing.Size(144, 26);
+            this.txbPrecoEdi.TabIndex = 21;
             // 
             // lblPrecoEdi
             // 
             this.lblPrecoEdi.AutoSize = true;
-            this.lblPrecoEdi.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecoEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecoEdi.Location = new System.Drawing.Point(24, 116);
             this.lblPrecoEdi.Name = "lblPrecoEdi";
-            this.lblPrecoEdi.Size = new System.Drawing.Size(63, 23);
+            this.lblPrecoEdi.Size = new System.Drawing.Size(65, 24);
             this.lblPrecoEdi.TabIndex = 20;
             this.lblPrecoEdi.Text = "Preço";
             // 
             // cmbCategoriaEdi
             // 
-            this.cmbCategoriaEdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoriaEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoriaEdi.FormattingEnabled = true;
             this.cmbCategoriaEdi.Location = new System.Drawing.Point(149, 84);
             this.cmbCategoriaEdi.Name = "cmbCategoriaEdi";
-            this.cmbCategoriaEdi.Size = new System.Drawing.Size(217, 27);
+            this.cmbCategoriaEdi.Size = new System.Drawing.Size(217, 28);
             this.cmbCategoriaEdi.TabIndex = 18;
             // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Location = new System.Drawing.Point(28, 160);
             this.btnEditar.Name = "btnEditar";
@@ -277,32 +305,33 @@
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txbProdutoEdi
             // 
-            this.txbProdutoEdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbProdutoEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbProdutoEdi.Location = new System.Drawing.Point(149, 51);
             this.txbProdutoEdi.Name = "txbProdutoEdi";
-            this.txbProdutoEdi.Size = new System.Drawing.Size(217, 27);
+            this.txbProdutoEdi.Size = new System.Drawing.Size(217, 26);
             this.txbProdutoEdi.TabIndex = 2;
             // 
             // lblCategoriaEdi
             // 
             this.lblCategoriaEdi.AutoSize = true;
-            this.lblCategoriaEdi.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoriaEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoriaEdi.Location = new System.Drawing.Point(21, 84);
             this.lblCategoriaEdi.Name = "lblCategoriaEdi";
-            this.lblCategoriaEdi.Size = new System.Drawing.Size(105, 23);
+            this.lblCategoriaEdi.Size = new System.Drawing.Size(99, 24);
             this.lblCategoriaEdi.TabIndex = 1;
             this.lblCategoriaEdi.Text = "Categoria";
             // 
             // lblProdutoEdi
             // 
             this.lblProdutoEdi.AutoSize = true;
-            this.lblProdutoEdi.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdutoEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProdutoEdi.Location = new System.Drawing.Point(21, 51);
             this.lblProdutoEdi.Name = "lblProdutoEdi";
-            this.lblProdutoEdi.Size = new System.Drawing.Size(66, 23);
+            this.lblProdutoEdi.Size = new System.Drawing.Size(66, 24);
             this.lblProdutoEdi.TabIndex = 0;
             this.lblProdutoEdi.Text = "Nome";
             // 
@@ -311,82 +340,88 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(404, 26);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(241, 40);
+            this.lblTitulo.Size = new System.Drawing.Size(256, 39);
             this.lblTitulo.TabIndex = 28;
             this.lblTitulo.Text = "     Produtos     ";
             // 
             // grbCategoria
             // 
             this.grbCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.grbCategoria.Controls.Add(this.button3);
-            this.grbCategoria.Controls.Add(this.button1);
+            this.grbCategoria.Controls.Add(this.btnEditarCategoria);
+            this.grbCategoria.Controls.Add(this.btnRemoverCategoria);
             this.grbCategoria.Controls.Add(this.txbAddCategoria);
-            this.grbCategoria.Controls.Add(this.button2);
+            this.grbCategoria.Controls.Add(this.btnAddCategoria);
             this.grbCategoria.Controls.Add(this.lblAddCategoria);
-            this.grbCategoria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCategoria.ForeColor = System.Drawing.Color.White;
-            this.grbCategoria.Location = new System.Drawing.Point(78, 637);
+            this.grbCategoria.Location = new System.Drawing.Point(75, 607);
             this.grbCategoria.Name = "grbCategoria";
             this.grbCategoria.Size = new System.Drawing.Size(880, 147);
             this.grbCategoria.TabIndex = 27;
             this.grbCategoria.TabStop = false;
             this.grbCategoria.Text = "Categorias";
             // 
-            // button3
+            // btnEditarCategoria
             // 
-            this.button3.BackColor = System.Drawing.Color.SandyBrown;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(463, 100);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(341, 31);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Editar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEditarCategoria.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnEditarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarCategoria.Location = new System.Drawing.Point(463, 100);
+            this.btnEditarCategoria.Name = "btnEditarCategoria";
+            this.btnEditarCategoria.Size = new System.Drawing.Size(341, 31);
+            this.btnEditarCategoria.TabIndex = 29;
+            this.btnEditarCategoria.Text = "Editar";
+            this.btnEditarCategoria.UseVisualStyleBackColor = false;
+            this.btnEditarCategoria.Click += new System.EventHandler(this.btnEditarCategoria_Click);
             // 
-            // button1
+            // btnRemoverCategoria
             // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(463, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(341, 31);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Remover";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRemoverCategoria.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoverCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoverCategoria.Location = new System.Drawing.Point(463, 63);
+            this.btnRemoverCategoria.Name = "btnRemoverCategoria";
+            this.btnRemoverCategoria.Size = new System.Drawing.Size(341, 31);
+            this.btnRemoverCategoria.TabIndex = 25;
+            this.btnRemoverCategoria.Text = "Remover";
+            this.btnRemoverCategoria.UseVisualStyleBackColor = false;
+            this.btnRemoverCategoria.Click += new System.EventHandler(this.btnRemoverCategoria_Click);
             // 
             // txbAddCategoria
             // 
-            this.txbAddCategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAddCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAddCategoria.Location = new System.Drawing.Point(93, 63);
             this.txbAddCategoria.Name = "txbAddCategoria";
-            this.txbAddCategoria.Size = new System.Drawing.Size(273, 27);
+            this.txbAddCategoria.Size = new System.Drawing.Size(273, 26);
             this.txbAddCategoria.TabIndex = 24;
             // 
-            // button2
+            // btnAddCategoria
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGreen;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(463, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(341, 31);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddCategoria.BackColor = System.Drawing.Color.LightGreen;
+            this.btnAddCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCategoria.Location = new System.Drawing.Point(463, 26);
+            this.btnAddCategoria.Name = "btnAddCategoria";
+            this.btnAddCategoria.Size = new System.Drawing.Size(341, 31);
+            this.btnAddCategoria.TabIndex = 24;
+            this.btnAddCategoria.Text = "Adicionar";
+            this.btnAddCategoria.UseVisualStyleBackColor = false;
+            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
             // 
             // lblAddCategoria
             // 
             this.lblAddCategoria.AutoSize = true;
-            this.lblAddCategoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddCategoria.Location = new System.Drawing.Point(21, 63);
             this.lblAddCategoria.Name = "lblAddCategoria";
-            this.lblAddCategoria.Size = new System.Drawing.Size(66, 23);
+            this.lblAddCategoria.Size = new System.Drawing.Size(66, 24);
             this.lblAddCategoria.TabIndex = 0;
             this.lblAddCategoria.Text = "Nome";
             // 
@@ -394,6 +429,7 @@
             // 
             this.pibSair.BackColor = System.Drawing.Color.Transparent;
             this.pibSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibSair.Image = ((System.Drawing.Image)(resources.GetObject("pibSair.Image")));
             this.pibSair.Location = new System.Drawing.Point(967, 24);
             this.pibSair.Margin = new System.Windows.Forms.Padding(4);
@@ -402,24 +438,56 @@
             this.pibSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pibSair.TabIndex = 29;
             this.pibSair.TabStop = false;
+            this.pibSair.Click += new System.EventHandler(this.pibSair_Click);
             // 
-            // GerenciamentoProdtos
+            // dgvCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.dgvCategorias.AllowUserToAddRows = false;
+            this.dgvCategorias.AllowUserToDeleteRows = false;
+            this.dgvCategorias.AllowUserToResizeColumns = false;
+            this.dgvCategorias.AllowUserToResizeRows = false;
+            this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCategorias.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCategorias.Location = new System.Drawing.Point(690, 88);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.Size = new System.Drawing.Size(219, 269);
+            this.dgvCategorias.TabIndex = 30;
+            this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
+            // 
+            // GerenciamentoProdutos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1043, 798);
+            this.ClientSize = new System.Drawing.Size(1043, 766);
+            this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.pibSair);
             this.Controls.Add(this.grbCategoria);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.grbEditarProduto);
             this.Controls.Add(this.grbAddProduto);
             this.Controls.Add(this.dgvProdutos);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "GerenciamentoProdtos";
+            this.Name = "GerenciamentoProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
@@ -433,6 +501,7 @@
             this.grbCategoria.ResumeLayout(false);
             this.grbCategoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibSair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,7 +520,7 @@
         private System.Windows.Forms.TextBox txbPrecoAdd;
         private System.Windows.Forms.Label lblAddPreco;
         private System.Windows.Forms.GroupBox grbEditarProduto;
-        private System.Windows.Forms.TextBox txbPecoEdi;
+        private System.Windows.Forms.TextBox txbPrecoEdi;
         private System.Windows.Forms.Label lblPrecoEdi;
         private System.Windows.Forms.ComboBox cmbCategoriaEdi;
         private System.Windows.Forms.Button btnEditar;
@@ -463,11 +532,12 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox grbCategoria;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditarCategoria;
+        private System.Windows.Forms.Button btnRemoverCategoria;
         private System.Windows.Forms.TextBox txbAddCategoria;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddCategoria;
         private System.Windows.Forms.Label lblAddCategoria;
         private System.Windows.Forms.PictureBox pibSair;
+        private System.Windows.Forms.DataGridView dgvCategorias;
     }
 }

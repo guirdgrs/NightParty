@@ -53,7 +53,8 @@ namespace NightParty
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            Views.GerenciamentoProdutos janela = new Views.GerenciamentoProdutos();
+            Views.GerenciamentoProdutos janela = new Views.GerenciamentoProdutos(usuario);
+            janela.Show();
         }
 
         private void btnCaixa_Click(object sender, EventArgs e)

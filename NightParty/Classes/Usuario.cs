@@ -38,25 +38,6 @@ namespace NightParty.Classes
             return tabela;
         }
 
-        public DataTable ListarUsuarios()
-        {
-            string comando = "SELECT id, nome_completo FROM usuarios";
-
-            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
-            MySqlConnection con = conexaoBD.ObterConexao();
-            MySqlCommand cmd = new MySqlCommand(comando, con);
-
-            cmd.Prepare();
-
-            DataTable tabela = new DataTable();
-
-
-            tabela.Load(cmd.ExecuteReader());
-            conexaoBD.Desconectar(con);
-
-            return tabela;
-        }
-
         public DataTable ListarTudo()
         {
             string comando = "SELECT id, nome_completo, email FROM usuarios";
@@ -88,8 +69,8 @@ namespace NightParty.Classes
             cmd.Parameters.AddWithValue("@nome_completo", NomeCompleto);
             cmd.Parameters.AddWithValue("@email", Email);
 
-            //Obter o hash da senha:
-            var hashsenha = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+
+            var hashsenha = EasyEncryption.SHA.ComputeSHA1Hash(Senha);
             cmd.Parameters.AddWithValue("@senha", hashsenha);
 
             cmd.Prepare();
