@@ -18,9 +18,9 @@ namespace NightParty.Classes
         public int Status { get; set; }
         public DateTime Data { get; set; }
 
-        public bool Novo()
+        public bool NovoPedido()
         {
-            string comando = "INSERT INTO pedidos (numpedido, idusuario, idproduto, quantidade) " +
+            string comando = "INSERT INTO pedidos (numpedido, idusuario, idproduto, quantidade ) " +
                              "VALUES (@num_pedido, @id_Usuario, @id_Produto, @quantidade) ";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
@@ -52,6 +52,7 @@ namespace NightParty.Classes
                 return false;
             }
         }
+
         public DataTable Buscar()
         {
             string comando = "SELECT * FROM view_pedidos WHERE NumeroDaMesa = @num_pedido";

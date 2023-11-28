@@ -44,6 +44,7 @@
             // 
             this.pibSair.BackColor = System.Drawing.Color.Transparent;
             this.pibSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibSair.Image = ((System.Drawing.Image)(resources.GetObject("pibSair.Image")));
             this.pibSair.Location = new System.Drawing.Point(596, 21);
             this.pibSair.Name = "pibSair";

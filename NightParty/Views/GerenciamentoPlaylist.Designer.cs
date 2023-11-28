@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciamentoPlaylist));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pibSair = new System.Windows.Forms.PictureBox();
             this.dgvPlaylist = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grbAddMusicaPlaylist = new System.Windows.Forms.GroupBox();
+            this.cmbMusica = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRemoverMusicaPl = new System.Windows.Forms.Button();
-            this.cmbArtista = new System.Windows.Forms.ComboBox();
             this.btnAddMusica = new System.Windows.Forms.Button();
-            this.lblAddArtista = new System.Windows.Forms.Label();
             this.lblAddNome = new System.Windows.Forms.Label();
             this.grbEditarMusicaPlaylist = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,19 +47,23 @@
             this.txbMusicaEdi = new System.Windows.Forms.TextBox();
             this.lblArtistaEdi = new System.Windows.Forms.Label();
             this.lblMusicaEdi = new System.Windows.Forms.Label();
-            this.cmbMusica = new System.Windows.Forms.ComboBox();
+            this.lblDia = new System.Windows.Forms.Label();
+            this.nudDia = new System.Windows.Forms.NumericUpDown();
+            this.lblPlaylistDia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pibSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlaylist)).BeginInit();
             this.grbAddMusicaPlaylist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grbEditarMusicaPlaylist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDia)).BeginInit();
             this.SuspendLayout();
             // 
             // pibSair
             // 
             this.pibSair.BackColor = System.Drawing.Color.Transparent;
             this.pibSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibSair.Image = ((System.Drawing.Image)(resources.GetObject("pibSair.Image")));
             this.pibSair.Location = new System.Drawing.Point(811, 13);
             this.pibSair.Margin = new System.Windows.Forms.Padding(4);
@@ -78,23 +81,23 @@
             this.dgvPlaylist.AllowUserToResizeColumns = false;
             this.dgvPlaylist.AllowUserToResizeRows = false;
             this.dgvPlaylist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlaylist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlaylist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPlaylist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlaylist.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlaylist.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPlaylist.Location = new System.Drawing.Point(103, 84);
             this.dgvPlaylist.Name = "dgvPlaylist";
             this.dgvPlaylist.Size = new System.Drawing.Size(664, 275);
@@ -108,7 +111,7 @@
             this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(272, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(276, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(336, 39);
             this.lblTitulo.TabIndex = 24;
@@ -117,21 +120,30 @@
             // grbAddMusicaPlaylist
             // 
             this.grbAddMusicaPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.grbAddMusicaPlaylist.Controls.Add(this.lblPlaylistDia);
+            this.grbAddMusicaPlaylist.Controls.Add(this.nudDia);
             this.grbAddMusicaPlaylist.Controls.Add(this.cmbMusica);
             this.grbAddMusicaPlaylist.Controls.Add(this.pictureBox2);
             this.grbAddMusicaPlaylist.Controls.Add(this.btnRemoverMusicaPl);
-            this.grbAddMusicaPlaylist.Controls.Add(this.cmbArtista);
             this.grbAddMusicaPlaylist.Controls.Add(this.btnAddMusica);
-            this.grbAddMusicaPlaylist.Controls.Add(this.lblAddArtista);
             this.grbAddMusicaPlaylist.Controls.Add(this.lblAddNome);
             this.grbAddMusicaPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAddMusicaPlaylist.ForeColor = System.Drawing.Color.White;
             this.grbAddMusicaPlaylist.Location = new System.Drawing.Point(36, 381);
             this.grbAddMusicaPlaylist.Name = "grbAddMusicaPlaylist";
-            this.grbAddMusicaPlaylist.Size = new System.Drawing.Size(358, 214);
+            this.grbAddMusicaPlaylist.Size = new System.Drawing.Size(358, 226);
             this.grbAddMusicaPlaylist.TabIndex = 25;
             this.grbAddMusicaPlaylist.TabStop = false;
             this.grbAddMusicaPlaylist.Text = "Adicionar / Remover";
+            // 
+            // cmbMusica
+            // 
+            this.cmbMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMusica.FormattingEnabled = true;
+            this.cmbMusica.Location = new System.Drawing.Point(114, 51);
+            this.cmbMusica.Name = "cmbMusica";
+            this.cmbMusica.Size = new System.Drawing.Size(217, 28);
+            this.cmbMusica.TabIndex = 21;
             // 
             // pictureBox2
             // 
@@ -151,44 +163,26 @@
             this.btnRemoverMusicaPl.BackColor = System.Drawing.Color.IndianRed;
             this.btnRemoverMusicaPl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoverMusicaPl.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoverMusicaPl.Location = new System.Drawing.Point(25, 170);
+            this.btnRemoverMusicaPl.Location = new System.Drawing.Point(25, 183);
             this.btnRemoverMusicaPl.Name = "btnRemoverMusicaPl";
             this.btnRemoverMusicaPl.Size = new System.Drawing.Size(306, 31);
             this.btnRemoverMusicaPl.TabIndex = 19;
             this.btnRemoverMusicaPl.Text = "Remover";
             this.btnRemoverMusicaPl.UseVisualStyleBackColor = false;
-            // 
-            // cmbArtista
-            // 
-            this.cmbArtista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbArtista.FormattingEnabled = true;
-            this.cmbArtista.Location = new System.Drawing.Point(114, 84);
-            this.cmbArtista.Name = "cmbArtista";
-            this.cmbArtista.Size = new System.Drawing.Size(217, 28);
-            this.cmbArtista.TabIndex = 18;
+            this.btnRemoverMusicaPl.Click += new System.EventHandler(this.btnRemoverMusicaPl_Click);
             // 
             // btnAddMusica
             // 
             this.btnAddMusica.BackColor = System.Drawing.Color.LightGreen;
             this.btnAddMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMusica.ForeColor = System.Drawing.Color.Black;
-            this.btnAddMusica.Location = new System.Drawing.Point(25, 133);
+            this.btnAddMusica.Location = new System.Drawing.Point(25, 146);
             this.btnAddMusica.Name = "btnAddMusica";
             this.btnAddMusica.Size = new System.Drawing.Size(306, 31);
             this.btnAddMusica.TabIndex = 6;
             this.btnAddMusica.Text = "Adicionar";
             this.btnAddMusica.UseVisualStyleBackColor = false;
             this.btnAddMusica.Click += new System.EventHandler(this.btnAddMusica_Click);
-            // 
-            // lblAddArtista
-            // 
-            this.lblAddArtista.AutoSize = true;
-            this.lblAddArtista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddArtista.Location = new System.Drawing.Point(21, 84);
-            this.lblAddArtista.Name = "lblAddArtista";
-            this.lblAddArtista.Size = new System.Drawing.Size(91, 24);
-            this.lblAddArtista.TabIndex = 1;
-            this.lblAddArtista.Text = "Artista(s)";
             // 
             // lblAddNome
             // 
@@ -252,6 +246,7 @@
             this.btnEditarMusica.TabIndex = 6;
             this.btnEditarMusica.Text = "Editar";
             this.btnEditarMusica.UseVisualStyleBackColor = false;
+            this.btnEditarMusica.Click += new System.EventHandler(this.btnEditarMusica_Click);
             // 
             // txbMusicaEdi
             // 
@@ -281,14 +276,35 @@
             this.lblMusicaEdi.TabIndex = 0;
             this.lblMusicaEdi.Text = "Nome";
             // 
-            // cmbMusica
+            // lblDia
             // 
-            this.cmbMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMusica.FormattingEnabled = true;
-            this.cmbMusica.Location = new System.Drawing.Point(114, 51);
-            this.cmbMusica.Name = "cmbMusica";
-            this.cmbMusica.Size = new System.Drawing.Size(217, 28);
-            this.cmbMusica.TabIndex = 21;
+            this.lblDia.AutoSize = true;
+            this.lblDia.BackColor = System.Drawing.Color.Transparent;
+            this.lblDia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.ForeColor = System.Drawing.Color.White;
+            this.lblDia.Location = new System.Drawing.Point(376, 54);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(2, 27);
+            this.lblDia.TabIndex = 27;
+            // 
+            // nudDia
+            // 
+            this.nudDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudDia.Location = new System.Drawing.Point(114, 97);
+            this.nudDia.Name = "nudDia";
+            this.nudDia.Size = new System.Drawing.Size(107, 26);
+            this.nudDia.TabIndex = 22;
+            // 
+            // lblPlaylistDia
+            // 
+            this.lblPlaylistDia.AutoSize = true;
+            this.lblPlaylistDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaylistDia.Location = new System.Drawing.Point(47, 99);
+            this.lblPlaylistDia.Name = "lblPlaylistDia";
+            this.lblPlaylistDia.Size = new System.Drawing.Size(40, 24);
+            this.lblPlaylistDia.TabIndex = 23;
+            this.lblPlaylistDia.Text = "Dia";
             // 
             // GerenciamentoPlaylist
             // 
@@ -297,6 +313,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(872, 663);
+            this.Controls.Add(this.lblDia);
             this.Controls.Add(this.grbEditarMusicaPlaylist);
             this.Controls.Add(this.grbAddMusicaPlaylist);
             this.Controls.Add(this.lblTitulo);
@@ -316,6 +333,7 @@
             this.grbEditarMusicaPlaylist.ResumeLayout(false);
             this.grbEditarMusicaPlaylist.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,9 +346,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox grbAddMusicaPlaylist;
         private System.Windows.Forms.Button btnRemoverMusicaPl;
-        private System.Windows.Forms.ComboBox cmbArtista;
         private System.Windows.Forms.Button btnAddMusica;
-        private System.Windows.Forms.Label lblAddArtista;
         private System.Windows.Forms.Label lblAddNome;
         private System.Windows.Forms.GroupBox grbEditarMusicaPlaylist;
         private System.Windows.Forms.ComboBox cmbArtistaEdi;
@@ -341,5 +357,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ComboBox cmbMusica;
+        private System.Windows.Forms.Label lblDia;
+        private System.Windows.Forms.Label lblPlaylistDia;
+        private System.Windows.Forms.NumericUpDown nudDia;
     }
 }

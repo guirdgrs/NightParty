@@ -21,28 +21,25 @@ namespace NightParty.Views
             this.usuario = usuario;
 
             Classes.Playlist playlist = new Classes.Playlist();
+
             dgvPlaylist.DataSource = playlist.Listar();
+            
+            playlist.IdPlaylist = DateTime.Now.Day;
 
             Classes.Musica musica = new Classes.Musica();
             var r = musica.Listar();
 
             foreach (DataRow linha in r.Rows)
             {
-                cmbMusica.Items.Add(linha.ItemArray[0].ToString() + " - "
-                                  + linha.ItemArray[1].ToString());
+                cmbMusica.Items.Add(linha.ItemArray[1].ToString() + " - "
+                                  + linha.ItemArray[2].ToString());
             }
 
-            Classes.Artista artista = new Classes.Artista();
-            var r1 = artista.Listar();
+            //Id da playlist = dia do mês
+            nudDia.Minimum = 1;
+            nudDia.Maximum = 31;
 
-            foreach (DataRow linha in r1.Rows)
-            {
-                cmbArtista.Items.Add(linha.ItemArray[0].ToString() + " - "
-                                   + linha.ItemArray[1].ToString());
-
-                cmbArtistaEdi.Items.Add(linha.ItemArray[0].ToString() + " - "
-                                      + linha.ItemArray[1].ToString());
-            }
+            lblDia.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
 
         private void pibSair_Click(object sender, EventArgs e)
@@ -68,12 +65,100 @@ namespace NightParty.Views
             int Selecao = dgvPlaylist.CurrentCell.RowIndex;
             var l = dgvPlaylist.Rows[Selecao];
 
-            txbMusicaEdi.Text = l.Cells[1].Value.ToString();
+            txbMusicaEdi.Text = l.Cells[2].Value.ToString();
+
+            grbEditarMusicaPlaylist.Enabled = true;
         }
 
         private void btnAddMusica_Click(object sender, EventArgs e)
         {
             Classes.Playlist playlist = new Classes.Playlist();
+
+            playlist.IdMusica = int.Parse(cmbMusica.Text.Split('-')[0]);
+
+            try
+            {
+                if (playlist.NovaMusica())
+                {
+                    MessageBox.Show("Música adicionada a playlist!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    AtualizarDados();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRemoverMusicaPl_Click(object sender, EventArgs e)
+        {
+            Classes.Playlist playlist = new Classes.Playlist();
+
+            playlist.IdMusica = int.Parse(cmbMusica.Text.Split('-')[0]);
+            playlist.IdPlaylist = DateTime.Now.Day;
+
+            try 
+            { 
+                if (playlist.ApagarMusica())
+            {
+                MessageBox.Show("Música removida da playlist!", "Sucesso",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                AtualizarDados();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um erro", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnEditarMusica_Click(object sender, EventArgs e)
+        {
+            Classes.Playlist playlist = new Classes.Playlist();
+            playlist.IdPlaylist = playlist.Id;
+
+
+            Classes.Musica musica = new Classes.Musica();
+            musica.Nome = txbMusicaEdi.Text;
+
+            playlist.IdMusica = musica.Id;
+
+            try
+            {
+                if (playlist.EditarMusica())
+                {
+                    MessageBox.Show("Música editada!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    AtualizarDados();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

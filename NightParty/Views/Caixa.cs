@@ -42,7 +42,7 @@ namespace NightParty.Views
                 {
                     dgvPedidos.DataSource = r;
 
-                    lblTotal.Text = "Total: R$ " + r.Compute("SUM(total_pedido", "True").ToString();
+                    lblTotal.Text = "Total: R$ " + r.Compute("SUM(TotalPedido)", "True").ToString();
                 }
                 else
                 {
@@ -90,7 +90,7 @@ namespace NightParty.Views
                 {
                     if (pedido.Atualizar())
                     {
-                        MessageBox.Show("Ficha encerrada", "Sucesso",
+                        MessageBox.Show("Pedido encerrado", "Sucesso",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         txbNumMesa.Clear();

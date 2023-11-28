@@ -41,7 +41,7 @@ namespace NightParty
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
-            Views.GerenciamentoPlaylist janela = new Views.GerenciamentoPlaylist();
+            Views.GerenciamentoPlaylist janela = new Views.GerenciamentoPlaylist(usuario);
             janela.Show();
         }
 

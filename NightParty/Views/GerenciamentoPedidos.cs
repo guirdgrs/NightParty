@@ -26,14 +26,11 @@ namespace NightParty.Views
             dgvComida.DataSource = comidas.ListarComidas();
 
             Classes.Produto bebidas = new Classes.Produto();
-            dgvComida.DataSource = bebidas.ListarBebidas();
+            dgvBebidas.DataSource = bebidas.ListarBebidas();
 
             //Estabelecendo a qtd max. e min. dos NUD's
-            nudQtdBebida.Minimum = 1;
-            nudQtdBebida.Maximum = 100;
-
-            nudQtdComida.Minimum = 1;
-            nudQtdComida.Maximum = 100;
+            nudQtdProduto.Minimum = 1;
+            nudQtdProduto.Maximum = 100;
         }
         public void AtualizarDados()
         {
@@ -43,14 +40,14 @@ namespace NightParty.Views
             Classes.Produto bebidas = new Classes.Produto();
             dgvBebidas.DataSource = bebidas.ListarBebidas();
 
-            txbBebida.Clear();
-            txbComida.Clear();
+            txbProduto.Clear();
             txbIdProduto.Clear();
             txbMesa.Clear();
 
             grbPedido.Enabled = false;
             grbLancamento.Enabled = true;
         }
+
 
         private void pibSair_Click(object sender, EventArgs e)
         {
@@ -61,24 +58,24 @@ namespace NightParty.Views
             int Selecao = dgvBebidas.CurrentCell.RowIndex;
             var l = dgvBebidas.Rows[Selecao];
 
-            txbBebida.Text = l.Cells[1].Value.ToString();
+            txbProduto.Text = l.Cells[1].Value.ToString();
             txbIdProduto.Text = l.Cells[0].Value.ToString();
         }
 
         private void dgvComida_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int Selecao = dgvComida.CurrentCell.RowIndex;
-            var l = dgvBebidas.Rows[Selecao];
+            var l = dgvComida.Rows[Selecao];
 
-            txbComida.Text = l.Cells[1].Value.ToString();
+            txbProduto.Text = l.Cells[1].Value.ToString();
             txbIdProduto.Text = l.Cells[0].Value.ToString();
         }
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             if (txbMesa.Text != "" && txbIdProduto.Text != "")
             {
-                grbPedido.Enabled = false;
-                grbLancamento.Enabled = true;
+                grbPedido.Enabled = true;
+                grbLancamento.Enabled = false;
 
                 NumMesa = int.Parse(txbMesa.Text);
             }
@@ -94,55 +91,44 @@ namespace NightParty.Views
             var r = MessageBox.Show("Confirmar pedido?", "Aviso!",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            try
+            if (r == DialogResult.Yes)
             {
-                if (r == DialogResult.Yes)
+                Classes.Pedido pedido = new Classes.Pedido();
+
+                pedido.NumPedido = int.Parse(txbMesa.Text);
+                pedido.IdProduto = int.Parse(txbIdProduto.Text);
+                pedido.Quantidade = int.Parse(nudQtdProduto.Text);
+                pedido.IdUsuario = usuario.Id;
+
+                if (pedido.NovoPedido())
                 {
-                    Classes.Pedido pedido = new Classes.Pedido();
+                    MessageBox.Show("Pedido efetuado!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    pedido.NumPedido = int.Parse(txbMesa.Text);
-                    pedido.IdProduto = int.Parse(txbIdProduto.Text);
-                    pedido.Quantidade = int.Parse(nudQtdBebida.Text);
-                    pedido.Quantidade = int.Parse(nudQtdComida.Text);
-                    pedido.IdUsuario = usuario.Id;
+                    AtualizarDados();
 
-                    if (pedido.Novo())
+                    var r1 = MessageBox.Show("Deseja adicionar outro produto?", "Aviso!",
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (r1 == DialogResult.Yes)
                     {
-                        MessageBox.Show("Pedido efetuado!", "Sucesso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        AtualizarDados();
-
-                        var r1 = MessageBox.Show("Deseja adicionar outro produto?", "Aviso!",
-                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        if (r1 == DialogResult.Yes)
-                        {
-                            txbMesa.Text = NumMesa.ToString();
-                        }
-                        else
-                        {
-                            AtualizarDados();
-                        }
+                        txbMesa.Text = NumMesa.ToString();
                     }
                     else
                     {
-                        MessageBox.Show("Falha no lançamento!", "Erro",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         AtualizarDados();
                     }
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Falha no lançamento!", "Erro",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Falha no lançamento!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                AtualizarDados();
+                    AtualizarDados();
+                }
             }
+        
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             AtualizarDados();

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caixa));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pibSair = new System.Windows.Forms.PictureBox();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -47,6 +49,7 @@
             // 
             this.pibSair.BackColor = System.Drawing.Color.Transparent;
             this.pibSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibSair.Image = ((System.Drawing.Image)(resources.GetObject("pibSair.Image")));
             this.pibSair.Location = new System.Drawing.Point(836, 31);
             this.pibSair.Margin = new System.Windows.Forms.Padding(4);
@@ -64,7 +67,23 @@
             this.dgvPedidos.AllowUserToResizeColumns = false;
             this.dgvPedidos.AllowUserToResizeRows = false;
             this.dgvPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPedidos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedidos.Location = new System.Drawing.Point(80, 150);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.Size = new System.Drawing.Size(710, 250);
@@ -120,6 +139,7 @@
             // btnEncerrar
             // 
             this.btnEncerrar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnEncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEncerrar.ForeColor = System.Drawing.Color.Black;
             this.btnEncerrar.Location = new System.Drawing.Point(331, 450);
@@ -134,6 +154,7 @@
             // 
             this.pibPesquisar.BackColor = System.Drawing.Color.Transparent;
             this.pibPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibPesquisar.ErrorImage = null;
             this.pibPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pibPesquisar.Image")));
             this.pibPesquisar.Location = new System.Drawing.Point(557, 98);

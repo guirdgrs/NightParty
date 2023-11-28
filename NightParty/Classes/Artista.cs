@@ -15,7 +15,7 @@ namespace NightParty.Classes
 
         public DataTable Listar()
         {
-            string comando = "SELECT nome FROM artistas";
+            string comando = "SELECT * FROM artistas";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();

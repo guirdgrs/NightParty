@@ -15,28 +15,23 @@ namespace NightParty.Classes
         public string Email { get; set; }
         public string Senha { get; set; }
 
-        //Método de login
         public DataTable Logar()
         {
-            string comando = "SELECT idusuario, nome_completo, email, senha" +
+            string comando = "SELECT id,nome_completo, email, senha" +
                 " FROM usuarios WHERE email = @email AND senha = @senha";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
 
-            // Substituir os 'coringas' por valores:
             cmd.Parameters.AddWithValue("@email", Email);
 
-            // Hash da senha:
-            var hashsenha = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+            var hashsenha = EasyEncryption.SHA.ComputeSHA1Hash(Senha);
             cmd.Parameters.AddWithValue("@senha", hashsenha);
 
             cmd.Prepare();
-            // Tabela que irá receber o resultado:
             DataTable tabela = new DataTable();
 
-            // Preencher a tabela com o resultado
             tabela.Load(cmd.ExecuteReader());
             conexaoBD.Desconectar(con);
 

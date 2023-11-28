@@ -68,6 +68,7 @@
             // 
             this.pibSair.BackColor = System.Drawing.Color.Transparent;
             this.pibSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pibSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibSair.Image = ((System.Drawing.Image)(resources.GetObject("pibSair.Image")));
             this.pibSair.Location = new System.Drawing.Point(723, 24);
             this.pibSair.Name = "pibSair";
@@ -92,6 +93,7 @@
             // 
             // btnPedido
             // 
+            this.btnPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.Location = new System.Drawing.Point(184, 151);
@@ -104,6 +106,7 @@
             // 
             // btnMusica
             // 
+            this.btnMusica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMusica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMusica.Location = new System.Drawing.Point(184, 199);
@@ -116,6 +119,7 @@
             // 
             // btnUsuario
             // 
+            this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Location = new System.Drawing.Point(184, 334);
@@ -128,6 +132,7 @@
             // 
             // btnPlaylist
             // 
+            this.btnPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaylist.Location = new System.Drawing.Point(184, 247);
@@ -140,6 +145,7 @@
             // 
             // btnProdutos
             // 
+            this.btnProdutos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdutos.Location = new System.Drawing.Point(184, 382);
@@ -272,6 +278,7 @@
             // 
             // btnCaixa
             // 
+            this.btnCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaixa.Location = new System.Drawing.Point(184, 430);

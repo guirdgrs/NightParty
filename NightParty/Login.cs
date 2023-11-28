@@ -45,25 +45,29 @@ namespace NightParty.Views
 
             var r = usuario.Logar();
 
-            if(r.Rows.Count >= 1) //True - login sucedido
+            if(r.Rows.Count <= 0)
+            {
+                MessageBox.Show("E-mail ou senha incorretos", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txbSenha.Clear();
+            }
+            else
             {
                 usuario.NomeCompleto = r.Rows[0]["nome_completo"].ToString();
-                usuario.Id = (int)(r.Rows[0]["idusuario"]);
+                usuario.Id = (int)r.Rows[0]["id"];
 
                 txbEmail.Clear();
                 txbSenha.Clear();
 
-                MessageBox.Show("Bem-vindo " + usuario.NomeCompleto , "Sucesso",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Bem-vindo " + usuario.NomeCompleto, "Sucesso",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MenuPrincipal janela = new MenuPrincipal(usuario);
 
                 Hide();
-            }
-            else //False - Falha no login
-            {
-                MessageBox.Show("E-mail ou senha incorretos", "Erro", 
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                txbSenha.Clear();
+                janela.ShowDialog();
+                Show();
             }
         }
     }
