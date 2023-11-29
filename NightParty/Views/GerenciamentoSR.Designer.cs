@@ -170,6 +170,7 @@
             // 
             // cmbArtistas
             // 
+            this.cmbArtistas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbArtistas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbArtistas.FormattingEnabled = true;
             this.cmbArtistas.Location = new System.Drawing.Point(114, 84);
@@ -332,6 +333,7 @@
             // 
             // cmbArtistasEdi
             // 
+            this.cmbArtistasEdi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbArtistasEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbArtistasEdi.FormattingEnabled = true;
             this.cmbArtistasEdi.Location = new System.Drawing.Point(308, 51);

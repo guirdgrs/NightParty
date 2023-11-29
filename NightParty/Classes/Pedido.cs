@@ -20,8 +20,8 @@ namespace NightParty.Classes
 
         public bool NovoPedido()
         {
-            string comando = "INSERT INTO pedidos (numpedido, idusuario, idproduto, quantidade ) " +
-                             "VALUES (@num_pedido, @id_Usuario, @id_Produto, @quantidade) ";
+            string comando = "INSERT INTO pedidos (numpedido, idusuario, idproduto, quantidade, status) " +
+                             "VALUES (@num_pedido, @id_Usuario, @id_Produto, @quantidade , 1) ";
 
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();

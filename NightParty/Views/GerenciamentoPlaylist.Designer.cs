@@ -171,6 +171,7 @@
             // 
             // cmbMusica
             // 
+            this.cmbMusica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMusica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMusica.FormattingEnabled = true;
             this.cmbMusica.Location = new System.Drawing.Point(114, 51);

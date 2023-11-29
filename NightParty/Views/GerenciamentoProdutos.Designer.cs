@@ -184,6 +184,7 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(149, 84);
@@ -244,6 +245,7 @@
             this.grbEditarProduto.Controls.Add(this.txbProdutoEdi);
             this.grbEditarProduto.Controls.Add(this.lblCategoriaEdi);
             this.grbEditarProduto.Controls.Add(this.lblProdutoEdi);
+            this.grbEditarProduto.Enabled = false;
             this.grbEditarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbEditarProduto.ForeColor = System.Drawing.Color.White;
             this.grbEditarProduto.Location = new System.Drawing.Point(561, 363);
@@ -286,6 +288,7 @@
             // 
             // cmbCategoriaEdi
             // 
+            this.cmbCategoriaEdi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriaEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoriaEdi.FormattingEnabled = true;
             this.cmbCategoriaEdi.Location = new System.Drawing.Point(149, 84);
